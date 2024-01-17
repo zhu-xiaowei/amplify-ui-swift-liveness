@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "AmplifyUILiveness",
     defaultLocalization: "en",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "FaceLiveness",
@@ -28,8 +28,5 @@ let package = Package(
                 .copy("Resources/face_detection_short_range.mlmodelc")
             ]
         ),
-        .testTarget(
-            name: "FaceLivenessTests",
-            dependencies: ["FaceLiveness"]),
     ]
 )
